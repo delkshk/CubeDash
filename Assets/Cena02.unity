@@ -8199,6 +8199,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 394201995}
+    - target: {fileID: 3464845638388582407, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4811524852919088469, guid: bd0d7fd9baf975847929193e22b1bc3f,
+        type: 3}
+    - target: {fileID: 3464845638388582407, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
     - target: {fileID: 6730753341317094655, guid: b3e87a450b941b64e8a7a43b4176bbad,
         type: 3}
       propertyPath: m_RootOrder
@@ -8208,6 +8219,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7905031740914684160, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4811524852919088469, guid: bd0d7fd9baf975847929193e22b1bc3f,
+        type: 3}
+    - target: {fileID: 7905031740914684160, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8540377110424147340, guid: b3e87a450b941b64e8a7a43b4176bbad,
         type: 3}
@@ -8237,6 +8259,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 410988608923826415, guid: b3e87a450b941b64e8a7a43b4176bbad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b3e87a450b941b64e8a7a43b4176bbad, type: 3}
+--- !u!1 &2181291498898196711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 450035012931162117, guid: b3e87a450b941b64e8a7a43b4176bbad,
+    type: 3}
+  m_PrefabInstance: {fileID: 2181291498898196710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4811524852741065118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8304,6 +8332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4811524852919088469, guid: bd0d7fd9baf975847929193e22b1bc3f,
+        type: 3}
+      propertyPath: PauseUI
+      value: 
+      objectReference: {fileID: 2181291498898196711}
     - target: {fileID: 4811524852919088469, guid: bd0d7fd9baf975847929193e22b1bc3f,
         type: 3}
       propertyPath: gameOverUI

@@ -2441,6 +2441,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814a978f23981e54bbef1158f23d0ccc, type: 3}
+--- !u!1 &1365069528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 450035012931162117, guid: b3e87a450b941b64e8a7a43b4176bbad,
+    type: 3}
+  m_PrefabInstance: {fileID: 2181291498898196710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1399362176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3138,6 +3144,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 450035012931162117, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450035012931162117, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_TagString
+      value: PauseScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 2181291499744542759, guid: b3e87a450b941b64e8a7a43b4176bbad,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3253,16 +3269,41 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 394201995}
-    - target: {fileID: 6730753341317094655, guid: b3e87a450b941b64e8a7a43b4176bbad,
+    - target: {fileID: 2342417437339714680, guid: b3e87a450b941b64e8a7a43b4176bbad,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 3
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342417437339714680, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.009433985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342417437339714680, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.009433985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342417437339714680, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.009433985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342417437339714680, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6730753341317094655, guid: b3e87a450b941b64e8a7a43b4176bbad,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7905031740914684160, guid: b3e87a450b941b64e8a7a43b4176bbad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 497876171}
     - target: {fileID: 8540377110424147340, guid: b3e87a450b941b64e8a7a43b4176bbad,
         type: 3}
       propertyPath: m_IsActive
@@ -3427,6 +3468,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4811524852919088469, guid: bd0d7fd9baf975847929193e22b1bc3f,
+        type: 3}
+      propertyPath: PauseUI
+      value: 
+      objectReference: {fileID: 1365069528}
     - target: {fileID: 4811524852919088469, guid: bd0d7fd9baf975847929193e22b1bc3f,
         type: 3}
       propertyPath: gameOverUI

@@ -8,6 +8,7 @@ TagManager:
   - Points
   - PointsUI
   - GameOverScreen
+  - PauseScreen
   layers:
   - Default
   - TransparentFX
