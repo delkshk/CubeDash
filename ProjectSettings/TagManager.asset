@@ -9,6 +9,8 @@ TagManager:
   - PointsUI
   - GameOverScreen
   - PauseScreen
+  - Ground
+  - VolumeSlider
   layers:
   - Default
   - TransparentFX

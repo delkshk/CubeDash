@@ -97,8 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7673802504316405917}
-  forwardForce: 8000
-  sidewaysForce: 120
   player: {fileID: 7673802504316405915}
 --- !u!54 &7673802504316405917
 Rigidbody:
@@ -129,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 7673802504316405916}
-  PointSound: {fileID: 0}
+  PlayerSound: {fileID: 0}
 --- !u!65 &6021955474156060697
 BoxCollider:
   m_ObjectHideFlags: 0

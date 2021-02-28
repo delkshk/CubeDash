@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -8,10 +10,20 @@ public class GameManager : MonoBehaviour
     public GameObject completeLevelUI;
     public GameObject gameOverUI;
     public GameObject PauseUI;
-
+    public Slider VolumeSlider;
     public void CompleteLevel()
     {
         completeLevelUI.SetActive(true);
+    }
+    void Start()
+    {
+        VolumeSlider.onValueChanged.AddListener(delegate { ChangeVolumeInGame(); });
+        if (PlayerPrefs.HasKey("config_volumeMusic"))
+        {
+            GameObject CameraObj = GameObject.FindGameObjectWithTag("MainCamera");
+            CameraObj.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("config_volumeMusic");
+            //Debug.Log(CameraObj.GetComponent<AudioSource>().volume);
+        }
     }
     public void EndGame()
     {
@@ -33,6 +45,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Resume Game");
         GameObject.FindWithTag("PauseScreen").SetActive(false);
         Time.timeScale = 1;
+
     }
     public void BackToMenu()
     {
@@ -51,7 +64,17 @@ public class GameManager : MonoBehaviour
             {
                     PauseUI.SetActive(true);
                     Time.timeScale = 0;
+                    VolumeSlider.value = PlayerPrefs.GetFloat("config_volumeMusic");
             }
         }
+    }
+    public void ChangeVolumeInGame()
+    {
+
+        float volume = VolumeSlider.value;
+        //Debug.Log(volume);
+        PlayerPrefs.SetFloat("config_volumeMusic", volume);
+        GameObject CameraObj = GameObject.FindGameObjectWithTag("MainCamera");
+        CameraObj.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("config_volumeMusic");
     }
 }
