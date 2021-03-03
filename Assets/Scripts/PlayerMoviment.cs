@@ -6,9 +6,9 @@ public class PlayerMoviment : MonoBehaviour
 {
 
     public Rigidbody rb;
-    private float forwardForce = 10000f;
+    private float forwardForce = 12000f;
     private float sidewaysForce = 150f;
-    private float upForce = 600f;
+    private float upForce = 200f;
     public Transform player;
     // Update is called once per frame
     void FixedUpdate()
@@ -40,18 +40,33 @@ public class PlayerMoviment : MonoBehaviour
             }
 
         }
+
         if (rb.position.y < -1)
         {
             FindObjectOfType<GameManager>().EndGame();
         }
+        //if (Input.GetKey("q"))
+        //{
+        //    if (rb.position.y < 2)
+        //    {
+        //
+        //        rb.constraints = RigidbodyConstraints.FreezeRotationX;
+        //        rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+        //        rb.AddForce(0, upForce/3 * Time.deltaTime, 0, ForceMode.VelocityChange);
+        //        player.rotation = Quaternion.Euler(0, 0, 0);
+        //    }
+        //
+        //}
 
     }
     void OnCollisionStay(Collision col )
     {
-        if (col.collider.gameObject.tag == "Ground" && Input.GetKey("space"))
+        if (col.collider.gameObject.tag == "Ground")
         {
-            //Debug.Log("No chao");
-            rb.AddForce(0, upForce * Time.deltaTime, 0, ForceMode.VelocityChange);
+            if (Input.GetKey("space")){
+                //Debug.Log("No chao");
+                rb.AddForce(0, upForce * Time.deltaTime, 0, ForceMode.VelocityChange);
+            }
 
         }
     }

@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\PlayerMoviment.cs" />
     <Compile Include="Assets\Scripts\Points.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\SkinSystem.cs" />
     <Compile Include="Assets\Scripts\SpawnPlatform.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
