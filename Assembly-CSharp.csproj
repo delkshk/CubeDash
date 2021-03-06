@@ -65,12 +65,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Credits.cs" />
+    <Compile Include="Assets\Scripts\DayCicle.cs" />
+    <Compile Include="Assets\Scripts\DiscordController.cs" />
     <Compile Include="Assets\Scripts\EndTrigger.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Gameplay_UiControl.cs" />
     <Compile Include="Assets\Scripts\LevelCompleted.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\ConfigController.cs" />
     <Compile Include="Assets\Scripts\Menu_Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMoviment.cs" />
@@ -78,6 +82,7 @@
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\SkinSystem.cs" />
     <Compile Include="Assets\Scripts\SpawnPlatform.cs" />
+    <Compile Include="Assets\Skins\Default#00\cubeskin_animations.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -655,7 +660,12 @@
       <HintPath>D:/Users/David/Documents/Unity/Aprendendo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{2557DB66-3CAA-402F-81BD-D40678424E9F}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

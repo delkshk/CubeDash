@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4811524852919088466}
   - component: {fileID: 4811524852919088469}
+  - component: {fileID: 5265498674968111689}
+  - component: {fileID: 8756607369535218746}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,3 +47,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartDelay: 1
   completeLevelUI: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  PauseUI: {fileID: 0}
+  VolumeSlider: {fileID: 0}
+--- !u!114 &5265498674968111689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811524852919088468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ebc644721dd32949ae9965f0d29302c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skins:
+  - {fileID: 4319979955099435127, guid: 580167f6fc06ebb43a6810ddbea703d2, type: 3}
+  - {fileID: 8892697634605328328, guid: f8c828eb520162f4dae0a072391e1777, type: 3}
+--- !u!114 &8756607369535218746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811524852919088468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db941c9229f34c4aa7e7b737ef28205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Ground: {fileID: 0}
+  MainCamera: {fileID: 0}

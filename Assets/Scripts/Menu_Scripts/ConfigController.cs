@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ConfigController : MonoBehaviour
@@ -25,6 +26,7 @@ public class ConfigController : MonoBehaviour
     void SaveConfigs(GameObject Slider, string Key)
     {
         PlayerPrefs.SetFloat(Key, Slider.GetComponent<Slider>().value);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void SalvaConfigs()
     {

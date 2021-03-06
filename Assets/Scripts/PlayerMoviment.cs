@@ -8,19 +8,23 @@ public class PlayerMoviment : MonoBehaviour
     public Rigidbody rb;
     private float forwardForce = 12000f;
     private float sidewaysForce = 150f;
-    private float upForce = 200f;
+    private float upForce = 350f;
     public Transform player;
     // Update is called once per frame
+    private void Start()
+    {
+        //Fix floating skin
+        player.rotation = Quaternion.Euler(0, 0, 0);
+    }
     void FixedUpdate()
     {
         if (player.position.y < 2)
         {
             rb.AddForce(0, 0, forwardForce/2 * Time.deltaTime);
-            rb.AddForce(0, 0, player.position.y,ForceMode.Force);
         }
         else
         {
-            rb.AddForce(0, -upForce * (Time.deltaTime*2), forwardForce/3 * Time.deltaTime);
+            rb.AddForce(0, -upForce * (Time.deltaTime*2), forwardForce/2 * Time.deltaTime);
         }
         
         if (Input.GetKey("d"))
@@ -36,7 +40,7 @@ public class PlayerMoviment : MonoBehaviour
         {
             if (player.position.y > 2)
             {
-                rb.AddForce(0, -upForce / 12 * Time.deltaTime, 0, ForceMode.Impulse);
+                rb.AddForce(0, -upForce / 10 * Time.deltaTime, 0, ForceMode.Impulse);
             }
 
         }
@@ -45,18 +49,14 @@ public class PlayerMoviment : MonoBehaviour
         {
             FindObjectOfType<GameManager>().EndGame();
         }
-        //if (Input.GetKey("q"))
-        //{
-        //    if (rb.position.y < 2)
-        //    {
-        //
-        //        rb.constraints = RigidbodyConstraints.FreezeRotationX;
-        //        rb.constraints = RigidbodyConstraints.FreezeRotationZ;
-        //        rb.AddForce(0, upForce/3 * Time.deltaTime, 0, ForceMode.VelocityChange);
-        //        player.rotation = Quaternion.Euler(0, 0, 0);
-        //    }
-        //
-        //}
+        if (Input.GetKey("q"))
+        {
+            if (rb.position.y < 2)
+            {
+                player.rotation = Quaternion.Euler(0, 0, 0);
+            }
+        
+        }
 
     }
     void OnCollisionStay(Collision col )

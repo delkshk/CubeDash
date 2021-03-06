@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -8,11 +9,13 @@ public class Menu : MonoBehaviour
     public Text hs_value;
     public GameObject ConfigScreenUI;
     public GameObject WelcomeScreenUI;
+
     // Start is called before the first frame update
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
     public void QuitGame()
     {
         Application.Quit();

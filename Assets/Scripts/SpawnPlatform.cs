@@ -33,8 +33,8 @@ public class SpawnPlatform : MonoBehaviour
     void Start()
     {
         //START PLATFORM
-        Instantiate(StartPlatform, new Vector3(0, 0, 0), transform.rotation);
-        offset += offsetAppend;
+        //Instantiate(StartPlatform, new Vector3(0, 0, 0), transform.rotation);
+        offset += (int)(offsetAppend + 0.05);
         //Start Random
         Shuffle(platforms);
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -43,7 +43,7 @@ public class SpawnPlatform : MonoBehaviour
             
             if (i == 0)
             {
-                posY = offset;
+                posY = (int)(offset + 0.01);
             }
             else
             {
@@ -59,7 +59,7 @@ public class SpawnPlatform : MonoBehaviour
     void Update()
     {
         distance = player.position.z - currentPlatformPoint.position.z;
-        if (distance >= 2)
+        if (distance >= 3)
         {
             Recycle(currentPlatforms[PlatformIndex].gameObject);
             //CreatePlatform(currentPlatforms[PlatformIndex].gameObject, PlatformIndex);
@@ -85,7 +85,7 @@ public class SpawnPlatform : MonoBehaviour
     {
         Destroy(currentPlatforms[index].gameObject);
         currentPlatforms.RemoveAt(index);
-        Transform p = Instantiate(platforms[index], new Vector3(0, 0, offset), transform.rotation).transform;
+        Transform p = Instantiate(platforms[index], new Vector3(0, 0, (float)(offset + 0.01)), transform.rotation).transform;
         offset += offsetAppend;
         currentPlatforms.Add(p);
         
