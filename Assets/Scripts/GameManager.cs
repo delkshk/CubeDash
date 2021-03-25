@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -30,11 +29,26 @@ public class GameManager : MonoBehaviour
         
         if(gameHasEnded == false)
         {
+            //AddPoinst();
             gameHasEnded = true;
             gameOverUI.SetActive(true);
+
             Invoke("Restart", restartDelay);
         }
 
+    }
+    public void AddPoinst()
+    {
+        if (PlayerPrefs.HasKey("Total_Money"))
+        {
+            PlayerPrefs.SetInt("Total_Money", PlayerPrefs.GetInt("Total_Money") + (int)Points.Score);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Total_Money", (int)Points.Score);
+        }
+
+        //Debug.Log(PlayerPrefs.GetInt("Total_Money"));
     }
     void Restart()
     {

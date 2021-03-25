@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4811524852919088469}
   - component: {fileID: 5265498674968111689}
   - component: {fileID: 8756607369535218746}
+  - component: {fileID: 4010475328611679092}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Skins:
-  - {fileID: 4319979955099435127, guid: 580167f6fc06ebb43a6810ddbea703d2, type: 3}
+  - {fileID: 3323945121406837387, guid: b7f0ae5a4af41264eb2fe29621ad0a1d, type: 3}
   - {fileID: 8892697634605328328, guid: f8c828eb520162f4dae0a072391e1777, type: 3}
 --- !u!114 &8756607369535218746
 MonoBehaviour:
@@ -78,5 +79,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  Ground: {fileID: 0}
+  GroundMat: {fileID: 2100000, guid: b6e11d38e0d795447bb374a52906eb0f, type: 2}
+  ObsMaterial: {fileID: 2100000, guid: bd60d845f42f90a48b32210f7401fbc4, type: 2}
+  RampMaterial: {fileID: 2100000, guid: b596b8db4a3bb6b43beee8b65815934d, type: 2}
   MainCamera: {fileID: 0}
+  Day: 1
+  DayCicleOn: 1
+  ObsColor_1: {r: 0, g: 0.045587063, b: 1, a: 1}
+  ObsColor_2: {r: 1, g: 0, b: 0.009791374, a: 1}
+--- !u!114 &4010475328611679092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811524852919088468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f605e3b5144e82b4a9a32ae8a870e24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musics:
+  - {fileID: 8300000, guid: a592d6da478e7574ab2f8912e4ec644d, type: 3}
+  - {fileID: 8300000, guid: c67b7b4d0e42b104c8ea5501ef6c9dd0, type: 3}
+  - {fileID: 8300000, guid: e4c0002842ff1bf488bd178acb55f32b, type: 3}
+  audioSource: {fileID: 0}

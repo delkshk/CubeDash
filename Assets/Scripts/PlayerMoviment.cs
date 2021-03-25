@@ -24,7 +24,7 @@ public class PlayerMoviment : MonoBehaviour
         }
         else
         {
-            rb.AddForce(0, -upForce * (Time.deltaTime*2), forwardForce/2 * Time.deltaTime);
+            rb.AddForce(0, -upForce * Time.deltaTime * 7, forwardForce/2 * Time.deltaTime);
         }
         
         if (Input.GetKey("d"))

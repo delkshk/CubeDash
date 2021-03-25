@@ -1,4 +1,6 @@
 ﻿
+using GameJolt.API;
+using GameJolt.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,7 +11,7 @@ public class Menu : MonoBehaviour
     public Text hs_value;
     public GameObject ConfigScreenUI;
     public GameObject WelcomeScreenUI;
-
+ 
     // Start is called before the first frame update
     public void StartGame()
     {
@@ -31,7 +33,14 @@ public class Menu : MonoBehaviour
     }
     public void ReturnToHome()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        ConfigScreenUI.SetActive(false);
+        WelcomeScreenUI.SetActive(true);
+    }
+
+    public void ShowLeaderboard()
+    {
+        GameJoltUI.Instance.ShowLeaderboards();
     }
     public void Start()
     {
@@ -44,6 +53,7 @@ public class Menu : MonoBehaviour
                 hs_text.SetActive(true);
                 hs_value.text = PlayerPrefs.GetFloat("HS_Distance").ToString("0");
             }
+           
         }
         // Volume Configs
 

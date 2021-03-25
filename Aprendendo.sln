@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{2557DB66-3CAA-402F-81BD-D40678424E9F}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{08B1949C-357F-AB00-0CC5-6DCE1C690E66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{2557DB66-3CAA-402F-81BD-D40678424E9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameJoltRuntime", "GameJoltRuntime.csproj", "{75F45781-59C7-93EB-B3D3-A9A203511022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameJoltDemos", "GameJoltDemos.csproj", "{38A75C5A-B420-17A3-36B2-AA41E0BBF7A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameJoltEditor", "GameJoltEditor.csproj", "{A57DA9F7-7C12-68F0-90A2-7DB8DA4A3CAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +17,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2557DB66-3CAA-402F-81BD-D40678424E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2557DB66-3CAA-402F-81BD-D40678424E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2557DB66-3CAA-402F-81BD-D40678424E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2557DB66-3CAA-402F-81BD-D40678424E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B1949C-357F-AB00-0CC5-6DCE1C690E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F45781-59C7-93EB-B3D3-A9A203511022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F45781-59C7-93EB-B3D3-A9A203511022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F45781-59C7-93EB-B3D3-A9A203511022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F45781-59C7-93EB-B3D3-A9A203511022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A75C5A-B420-17A3-36B2-AA41E0BBF7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A75C5A-B420-17A3-36B2-AA41E0BBF7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A75C5A-B420-17A3-36B2-AA41E0BBF7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A75C5A-B420-17A3-36B2-AA41E0BBF7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57DA9F7-7C12-68F0-90A2-7DB8DA4A3CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57DA9F7-7C12-68F0-90A2-7DB8DA4A3CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57DA9F7-7C12-68F0-90A2-7DB8DA4A3CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57DA9F7-7C12-68F0-90A2-7DB8DA4A3CAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

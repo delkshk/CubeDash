@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -157,6 +158,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4740105876207046711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +236,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -261,7 +264,6 @@ GameObject:
   - component: {fileID: 6923637219019914751}
   - component: {fileID: 6923637219019914744}
   - component: {fileID: 7479360188879908223}
-  - component: {fileID: 6380617535251304968}
   - component: {fileID: 5863149471181477317}
   m_Layer: 0
   m_Name: Main Camera
@@ -446,18 +448,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6380617535251304968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923637219019914748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4c77dd60fe134f49a0dd12e598d3351, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5863149471181477317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,5 +461,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  QButton: {fileID: 0}
-  SPACEButton: {fileID: 0}
+  QButton: {fileID: 3048748213996509672}
+  SPACEButton: {fileID: 5569559839680757203}

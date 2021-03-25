@@ -26,16 +26,16 @@ public class ConfigController : MonoBehaviour
     void SaveConfigs(GameObject Slider, string Key)
     {
         PlayerPrefs.SetFloat(Key, Slider.GetComponent<Slider>().value);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void SalvaConfigs()
     {
         SaveConfigs(VolumeSlider, "config_volumeMusic");
         SaveConfigs(SkinSlider, "skin_atual");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void ResetaHS()
     {
         Debug.Log("Resetou HS");
-        PlayerPrefs.SetFloat("HS_Distance", 0);
+        PlayerPrefs.DeleteAll();
     }
 }

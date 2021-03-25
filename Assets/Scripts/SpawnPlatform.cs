@@ -61,17 +61,19 @@ public class SpawnPlatform : MonoBehaviour
         distance = player.position.z - currentPlatformPoint.position.z;
         if (distance >= 3)
         {
-            Recycle(currentPlatforms[PlatformIndex].gameObject);
+            //Recycle(currentPlatforms[PlatformIndex].gameObject);
+            CreatePlatform(PlatformIndex);
             //CreatePlatform(currentPlatforms[PlatformIndex].gameObject, PlatformIndex);
             PlatformIndex++;
             // Reset no index pra nao quebrar
-            if (PlatformIndex >= platforms.Count)
-            {
-                PlatformIndex = 0;
+            //if (PlatformIndex >= platforms.Count)
+            //{
+            //    PlatformIndex = 0;
                
-            }
-            currentPlatformPoint = currentPlatforms[PlatformIndex].Find("FinalPlatform");
-
+            //}
+            currentPlatformPoint = currentPlatforms[2].Find("FinalPlatform");
+            Destroy(currentPlatforms[0].gameObject);
+            currentPlatforms.RemoveAt(0);
         }
     }
     public void Recycle(GameObject platform)
@@ -81,13 +83,25 @@ public class SpawnPlatform : MonoBehaviour
 
         //
     }
-    public void CreatePlatform(GameObject platform,int index)
+    public void CreatePlatform(int index)
     {
-        Destroy(currentPlatforms[index].gameObject);
-        currentPlatforms.RemoveAt(index);
-        Transform p = Instantiate(platforms[index], new Vector3(0, 0, (float)(offset + 0.01)), transform.rotation).transform;
-        offset += offsetAppend;
-        currentPlatforms.Add(p);
+ 
         
+        GameObject new_p = Instantiate(platforms[Random.Range(0, platforms.Count - 1)], new Vector3(0, 0, (float)(offset + 0.01)), transform.rotation);
+        currentPlatforms.Add(new_p.transform);
+        offset += offsetAppend;
+        //Até aqui funciona
+
+        //Destroy(currentPlatforms[0].gameObject);
+        //currentPlatforms.RemoveAt(0);
+
+
+        //currentPlatforms.Add(new_p);
+        //Destroy(currentPlatforms[index].gameObject);
+        //currentPlatforms.RemoveAt(index);
+        //Transform p = Instantiate(platforms[index], new Vector3(0, 0, (float)(offset + 0.01)), transform.rotation).transform;
+        //offset += offsetAppend;
+        //currentPlatforms.Add(p);
+
     }
 }
